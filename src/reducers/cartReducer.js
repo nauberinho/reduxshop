@@ -8,7 +8,7 @@ var initialProducts = [{name: 'John Isa Elliott', price: 299, amount: 1, image: 
     {name: 'Eureza Delair', price: 4000, amount: 1, image: 'http://media.bellacor.com.edgesuite.net/images/500/79606091-055.jpg', cartAmount: 0, id: 1},
     {name: 'Golden watch', price: 50, amount: 49, image: 'http://da1urhpfd469z.cloudfront.net/uploads/advertphotos/17/0606/30775033-266-500x500.jpg', cartAmount: 0, id: 2},
     {name: 'Old Town Clocks', price: 119, amount: 49, image: 'https://ak1.ostkcdn.com/images/products/9540136/P16718907.jpg', cartAmount: 0, id: 3},
-    {name: 'Sixty Minutes Clock', price: 119, amount: 6, image: 'http://target.scene7.com/is/image/Target/50333758?wid=360&hei=360&qlt=80&fmt=pjpeg', cartAmount: 0, id: 4}];
+    {name: 'Sixty Minutes', price: 119, amount: 6, image: 'http://target.scene7.com/is/image/Target/50333758?wid=360&hei=360&qlt=80&fmt=pjpeg', cartAmount: 0, id: 4}];
 
 const cartReducer = (state = {
     cartProducts: initialProducts,
