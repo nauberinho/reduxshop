@@ -96,6 +96,7 @@ const productsReducer = (state = {
             return newState;
 
         case 'UPDATE_CHANGED_PRODUCT':
+            console.log(state.products, '= products')
             newPreviousStates = [...newState.previousStates]
             newPreviousStates.push({...newState})
 
@@ -105,7 +106,7 @@ const productsReducer = (state = {
             console.log(action.payload.target.getAttribute('data-key') + ' = key')
             let newChangedProducts = newState.products;
             newChangedProducts[action.payload.target.getAttribute('data-key')][action.payload.target.id] = value;
-            newState = {...newState, changedProducts: newChangedProducts, previousStates: newPreviousStates}
+            newState = {...newState, changedProducts: newChangedProducts, previousStates: newPreviousStates, products: [...state.products] }
             return newState;
 
         case 'SUBMIT_CHANGE':
@@ -118,13 +119,10 @@ const productsReducer = (state = {
                 let newList = [];
                 console.log(newList, 'idsToRemoveIsLongerThan 1', 'newProductslength: ' , newProducts.length)
                 for (let i = 0; i < newProducts.length; i++) {
-                    if(newState.idsToRemove.indexOf(newProducts[i].id) == -1){
+                    if(newState.idsToRemove.indexOf(newProducts[i].id) == -1) {
 
                         newList.push(newProducts[i])
                     }
-
-
-
                 }
                 for (let j = 0; j < newList.length; j++) {
 

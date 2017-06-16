@@ -14,7 +14,6 @@
 
 
 .container{
-  border: 2px solid black;
   width: 800px;
   margin: auto;
   height: 100vh;
@@ -27,7 +26,7 @@
   height: 6%;
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
+  border-bottom: 1px solid #ba743f;
 
 }
 
@@ -106,27 +105,39 @@
 
 .products-container{
   position: relative;
-  display: flex;
-  flex-direction: row;
+
   width: 90%;
   height: 80%;
 
-  overflow-x:hidden;
-  overflow-y: auto;
+
   border-left: 1px solid #9faf9e;
   border-right: 1px solid #9faf9e;
   margin:auto;
-  margin-top: 8%;
+  margin-top: 3%;
 float: left;
   clear: both;
 }
 
+.display-products-div{
+position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-x:hidden;
+  overflow-y: auto;
+
+  width: 100%;
+  height: 80%;
+  top: 10%;
+
+}
+
 .product-div{
   display: block;
-  margin: 2%;
+  margin: 0% 7% 0% 6%;
   border-left: 1px solid lightgrey;
   border-right: 1px solid lightgrey;
-  width: 30%;
+  width: 20%;
   height: 30%;
   background-color: white;
   font-family: 'Abel', sans-serif;
@@ -142,6 +153,7 @@ float: left;
   font-weight: 700;
   font-size: 120%;
   text-align: center;
+  margin-top: 2%;
 
 }
 
@@ -154,9 +166,9 @@ float: left;
 
 .product-image{
   border: 1px solid black;
-  height: 40%;
+  height: 65%;
   width: 90%;
-  margin: 0 0 0 5%;
+  margin: -5% 0 0 5%;
 }
 
 .product-input{
@@ -172,9 +184,16 @@ float: left;
   border-bottom: 1px solid #c4be4a;
 }
 
-.product-input-price, .product-input-store{
+.product-input-price{
 
-width: 100%%;
+width: 70%;
+  margin-top: 15%;
+}
+
+.product-input-store{
+
+  width: 40%;
+  margin-top: 15%;
 }
 
 .price-and-store{
@@ -191,9 +210,9 @@ width: 100%%;
 
 .product-store-div{
   position: absolute;
-  right: -15%;
+  right: -20%;
   top: 0;
-  width: 60%;
+  width: 65%;
 }
 
 .product-price-div{
@@ -276,8 +295,14 @@ display: inline-block;
   color: #9faf9e;
   width: 100%;
   z-index: 100;
+  margin-top:35%;
 }
 
+.delete-product:hover{
+  border-bottom: 1px solid #ba743f;
+  color: #ba743f;
+
+}
 .add-to-cart:hover{
   color: #c4be4a;
 border-bottom: 1px solid #c4be4a;

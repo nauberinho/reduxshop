@@ -48,9 +48,11 @@ const cartReducer = (state = {
             return newState;
 
         case 'REMOVE_FROM_CART':
+            let newTotal = newState.total - (newCartProducts[action.payload.id].cartAmount * newCartProducts[action.payload.id].price);
             newCartProducts[action.payload.id].amount += newCartProducts[action.payload.id].cartAmount;
             newCartProducts[action.payload.id].cartAmount -= newCartProducts[action.payload.id].cartAmount;
-            newState = {...state, products: newCartProducts, total: 0 }
+
+            newState = {...state, products: newCartProducts, total: newTotal}
             return newState;
 
         case 'UPDATE_CHANGED_PRODUCT':
