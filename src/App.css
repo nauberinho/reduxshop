@@ -134,7 +134,7 @@ position: relative;
 
 .product-div{
   display: block;
-  margin: 0% 7% 0% 6%;
+  margin: 0% 7% 6% 6%;
   border-left: 1px solid lightgrey;
   border-right: 1px solid lightgrey;
   width: 20%;
@@ -162,7 +162,17 @@ position: relative;
 
 }
 
+.not-available{
 
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'Abel', sans-serif;
+  font-weight: 900;
+  color: #d3d3d3;
+  margin-left: 5%;
+
+}
 
 .product-image{
   border: 1px solid black;

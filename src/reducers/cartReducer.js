@@ -7,7 +7,8 @@ const database = firebase.database();
 var initialProducts = [{name: 'Exhale', price: 199, amount: 100, image: 'https://www.jrrshop.com/media/catalog/product/m/g/mgn7ozl.png', cartAmount: 0, id: 0},
     {name: 'Gordon Wong', price: 1, amount: 100, image: 'http://content.rankinghero.com/walls/620680/activity_620680_1433197100_630.jpg', cartAmount: 0, id: 1},
     {name: 'Nike Magista', price: 119, amount: 49, image: 'http://www.prodirectsoccer.com/productimages/thumbs/153712.jpg', cartAmount: 0, id: 2},
-    {name: 'Nike Magista', price: 119, amount: 49, image: 'http://www.prodirectsoccer.com/productimages/thumbs/153712.jpg', cartAmount: 0, id: 3}];
+    {name: 'Nike Magista', price: 119, amount: 49, image: 'http://www.prodirectsoccer.com/productimages/thumbs/153712.jpg', cartAmount: 0, id: 3},
+    {name: 'A Horse', price: 200000, amount: 6, image: 'http://www.easyask.se/wp-content/uploads/sites/106/2015/04/photodune-250010-horse-xs-1.jpg', cartAmount: 0, id: 4}];
 
 const cartReducer = (state = {
     cartProducts: initialProducts,

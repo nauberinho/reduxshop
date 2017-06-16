@@ -33,9 +33,11 @@ export default class Products extends Component {
                         {product.amount > 0 && this.props.productsState.readOnly != false ?
                         <button className='add-to-cart' onClick={() => this.props.increaseCartAmount(this.props.productsState.products[key])}>Add to cart</button>
 
-                        : <button className='delete-product' onClick={() => this.props.deleteProduct(key)}>Delete product</button>}
+                        : null}
 
-                        {product.amount  < 1 && this.props.productsState.readOnly != false ? <button disabled>Not available in store</button> : null}
+                    {this.props.productsState.readOnly == false ? <button className='delete-product' onClick={() => this.props.deleteProduct(key)}>Delete product</button> : null}
+
+                        {product.amount  < 1 && this.props.productsState.readOnly != false ? <button className="not-available" disabled>Not available in store</button> : null}
 
                 </div>
             )
