@@ -1,0 +1,394 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+
+.container{
+  border: 2px solid black;
+  width: 800px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-container{
+  width: 100%;
+  height: 6%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+
+}
+
+.menu-tab{
+  background-color: white;
+  color: #9faf9e;
+  width: 25%;
+  align-content: center;
+  text-align: center;
+  height: 100%;
+  border: none;
+  border-left: 1px solid #e8ecf2;
+  transition: 0.3s ease;
+  font-family: 'Abel', sans-serif;
+  font-size: 120%;
+  font-weight: 700;
+  outline: none;
+}
+
+.menu-tab:hover{
+  background-color: #9faf9e;
+  color: white;
+
+  cursor: pointer;
+
+}
+
+.form-container{
+  width: 75%;
+  height: 50%;
+  margin:auto;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.setNewProduct{
+
+  width: 45%;
+  height: 14%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: auto;
+  font-family: 'Abel', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: #9faf9e;
+  transition: 0.3s ease;
+}
+.setNewProduct:hover {
+  color: #c4be4a;
+}
+
+
+.setPriceInput, .setAmountInput, .setNameInput, .setImageInput{
+
+  display: block;
+  height: 14%;
+  width: 100%;
+  margin:auto;
+  font-size: 2em;
+  font-family: 'Abel', sans-serif;
+  border: none;
+  border-bottom: 2px solid #9faf9e;
+  outline: none;
+  transition: 0.3s ease;
+
+}
+
+.setPriceInput:focus, .setAmountInput:focus, .setNameInput:focus, .setPriceInput:active, .setAmountInput:active, .setNameInput:active, .setImageInput:focus, .setImageInput:active {
+
+  border-bottom: 2px solid #c4be4a;
+
+}
+
+.products-container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 80%;
+
+  overflow-x:hidden;
+  overflow-y: auto;
+  border-left: 1px solid #9faf9e;
+  border-right: 1px solid #9faf9e;
+  margin:auto;
+  margin-top: 8%;
+float: left;
+  clear: both;
+}
+
+.product-div{
+  display: block;
+  margin: 2%;
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  width: 30%;
+  height: 30%;
+  background-color: white;
+  font-family: 'Abel', sans-serif;
+}
+
+.product-name-div, .product-image-div{
+  width: 100%;
+  align-content: center;
+  text-align: center;
+}
+
+.product-name-div{
+  font-weight: 700;
+  font-size: 120%;
+  text-align: center;
+
+}
+
+.product-price-div{
+  width: 30%;
+
+}
+
+
+
+.product-image{
+  border: 1px solid black;
+  height: 40%;
+  width: 90%;
+  margin: 0 0 0 5%;
+}
+
+.product-input{
+  display: block;
+  width: 100%;
+  font-family: 'Abel', sans-serif;
+  border: none;
+  border-bottom: 1px solid #9faf9e;
+  outline: none;
+}
+
+.product-input:active, .product-input:focus{
+  border-bottom: 1px solid #c4be4a;
+}
+
+.product-input-price, .product-input-store{
+
+width: 100%%;
+}
+
+.price-and-store{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10%;
+  position: relative;
+  margin-top: 2%;
+  font-size: 80%;
+
+
+}
+
+.product-store-div{
+  position: absolute;
+  right: -15%;
+  top: 0;
+  width: 60%;
+}
+
+.product-price-div{
+  position: absolute;
+  left: 5%;
+  width: 30%;
+}
+
+.edit-div{
+
+  position: absolute;
+  top:0%;
+  right: 4%;
+  height: 10%;
+  width: 10%;
+  margin-bottom: 30%;
+
+}
+
+.submit-change-button, .edit-button, .cancel-edit-button{
+
+display: inline-block;
+  height: 45%;
+  width: 95%;
+  margin:auto;
+  background:none;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Abel', sans-serif;
+  outline: none;
+  transition: 0.9s ease;
+  border: none;
+}
+
+.edit-button, .submit-change-button{
+
+  color: #c4be4a;
+}
+
+.edit-button:hover, .submit-change-button:hover{
+
+
+  border-bottom: 1px solid #c4be4a;
+}
+
+.cancel-edit-button{
+  color: #ba743f;
+
+}
+
+.cancel-edit-button:hover{
+
+  border-bottom: 1px solid #ba743f;
+
+}
+
+
+
+.add-to-cart{
+  font-family: 'Abel', sans-serif;
+  background:none;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+  cursor: pointer;
+  color: #9faf9e;
+  width: 100%;
+  z-index: 100;
+}
+
+.delete-product{
+  font-family: 'Abel', sans-serif;
+  background:none;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+  cursor: pointer;
+  color: #9faf9e;
+  width: 100%;
+  z-index: 100;
+}
+
+.add-to-cart:hover{
+  color: #c4be4a;
+border-bottom: 1px solid #c4be4a;
+}
+
+.cart-container{
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 90%;
+  overflow-x:hidden;
+  overflow-y:auto;
+  border-left: 1px solid #9faf9e;
+  border-right: 1px solid #9faf9e;
+  margin:auto;
+  font-family: 'Abel', sans-serif;
+
+}
+
+.cart-product{
+  position: relative;
+  height: 10%;
+  width: 70%;
+  margin:auto;
+  margin-left: 1%;
+  border-left: 1px solid #9faf9e;
+  border-right: 1px solid #9faf9e;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 4%;
+
+
+}
+
+.cart-amount-span{
+  font-weight: bold;
+
+}
+
+.cart-name-and-price{
+  display: flex;
+  flex-direction: column;
+  margin-right: 6%;
+  margin-left: 4%;
+  margin-top: 2%;
+
+}
+
+.cart-name{
+  font-weight: bold;
+
+}
+.cart-image{
+
+  max-height: 100%;
+  max-width: 30%;
+  border: 1px solid #9faf9e;
+
+}
+
+.cart-total{
+
+position: absolute;
+right: 14%;
+  bottom: 5%;
+  font-size: 140%;
+  font-weight: 700;
+
+}
+
+.amount-div{
+  position: absolute;
+  right: 0;
+
+
+}
+.plus, .minus, .remove-from-cart{
+
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-family: 'Abel', sans-serif;
+  font-weight: bolder;
+  transition: 0.3s ease;
+  outline: none;
+}
+
+.plus:hover, .minus:hover, .remove-from-cart:hover{
+
+  border-bottom: 1px solid #c4be4a;
+}
+
+.sign-in-to-edit{
+
+  border: none;
+  background: none;
+  font-family: 'Abel', sans-serif;
+  font-weight: 700;
+
+
+}
+
+.history-container{
+
+  font-family: 'Abel', sans-serif;
+  color: #9faf9e;
+  font-weight: 900;
+  width: 80%;
+  margin: auto;
+  height: 85%;
+  overflow: auto;
+}
