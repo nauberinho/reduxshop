@@ -16,20 +16,25 @@ export default class Cart extends Component{
                 product.cartAmount > 0 ?
                 <div className="cart-product" key={key}>
                     <div className="cart-name-and-price">
-                    <span className="cart-name">{product.name}</span>
-                    <span>{product.price} $</span>
-                </div>
+                        <span className="cart-name">{product.name}</span>
+                        <span>{product.price} $</span>
+                    </div>
 
                     <img alt={product.image} className='cart-image' src={product.image}></img><br/>
 
                     <div className="amount-div">
-                        <span><span className="cart-amount-span">{product.cartAmount}</span> in cart</span>
-                    {product.cartAmount > 1 ? <button className = "minus" onClick={() => this.props.decreaseCartAmount(this.props.cartState.cartProducts[key])}>-</button>
-                        :  <button className="minus" disabled>-</button> }
+                        <span className="cart-amount-span">{product.cartAmount} in cart </span>
+                        <div className="increase-decrease-div">
+                            {product.amount > 0 ? <button  className = "plus" onClick={() => this.props.increaseCartAmount(this.props.cartState.cartProducts[key])}>+</button> : <button  className = "plus plus-disabled" disabled >+</button>}
 
-                    <button className = "remove-from-cart"onClick={() => this.props.removeFromCart(this.props.cartState.cartProducts[key])}>Remove from cart</button>
 
-                    {product.amount > 0 ? <button  className = "plus" onClick={() => this.props.increaseCartAmount(this.props.cartState.cartProducts[key])}>+</button> : <button  className = "plus" disabled >+</button>}
+
+                        <button className = "remove-from-cart"onClick={() => this.props.removeFromCart(this.props.cartState.cartProducts[key])}>Remove from cart</button>
+
+                            {product.cartAmount > 1 ? <button className = "minus" onClick={() => this.props.decreaseCartAmount(this.props.cartState.cartProducts[key])}>-</button>
+                                :  <button className="minus minus-disabled" disabled>-</button> }
+
+                        </div>
                     </div>
                 </div>
 

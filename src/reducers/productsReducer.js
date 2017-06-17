@@ -94,7 +94,7 @@ const productsReducer = (state = {
             return newState;
 
         case 'EDITABLE':
-        newState.readOnly == true ? newState = {...newState, editClass: 'cancel-edit-button', readOnly: false, editText: 'Cancel edit', changedProducts: [...newState.products]}: newState={...newState, editClass: 'edit-button', readOnly: true, changedProducts: [], editText: 'Edit'}
+        newState.readOnly == true ? newState = {...newState, editClass: 'cancel-edit-button', readOnly: false, editText: 'Cancel edit', changedProducts: [...newState.products]}: newState={...newState, editClass: 'edit-button', readOnly: true, changedProducts: [], editText: 'Edit', idsToRemove: [], products: newState.products}
             return newState;
 
         case 'UPDATE_CHANGED_PRODUCT':
@@ -133,7 +133,7 @@ const productsReducer = (state = {
                 newProducts = newList;
             }
 
-            newState = {...newState, products: newProducts, readOnly: true, editText: 'Edit', previousStates: newPreviousStates};
+            newState = {...newState, products: newProducts, readOnly: true, editText: 'Edit', previousStates: newPreviousStates, idsToRemove: [] };
             //newState.changedProducts.length == 0 || newState.idsToRemove.length == 0 ? newState = {...newState, changedProducts:  []} : newState = {...newState, products: newProducts, readOnly: true, editText: 'Edit'};
 
             return newState;

@@ -27,7 +27,7 @@ const historyReducer = (state = {
             newState = {...newState, actions: newActions}
             return newState;
         }
-    if(action.type!= 'REGRET_ACTION') {
+    if(action.type!= 'REGRET_ACTION' && action.type!= '@@redux/INIT') {
         let newNumberOfRegretables= newState.numberOfRegretables;
         let newActionsList = state.actions;
         let bool;
@@ -45,9 +45,12 @@ const historyReducer = (state = {
             {
                 message: action.type,
                 regretable: bool,
-                regretableIndex: newNumberOfRegretables
+                regretableIndex: newNumberOfRegretables,
+                time: new Date ()
     }
     )
+
+
 
         newState = {...state, actions: newActionsList, numberOfRegretables: newNumberOfRegretables};
 

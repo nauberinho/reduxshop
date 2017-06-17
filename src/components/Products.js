@@ -46,20 +46,16 @@ export default class Products extends Component {
             <div className='products-container'>
                  <div className="edit-div">
                      {this.props.authenticated == true ?
-                         <div>
+                         <div className="cancel-and-submit">
                          {this.props.productsState.products.length>0 ?
                     <button className={this.props.productsState.editClass} onClick={this.props.editable}>{this.props.productsState.editText}</button> : null}
                 {this.props.productsState.readOnly == false ? <button className='submit-change-button' onClick={this.props.submitChange}>Submit change</button> : null}
                          </div>: <button className="sign-in-to-edit" disabled>Sign in to edit</button>}
                 </div>
 
-<div className="display-products-div">
-    {liMap}
-</div>
-
-
-
-
+                <div className="display-products-div">
+                    {liMap}
+                </div>
             </div>
 
         )

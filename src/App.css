@@ -210,7 +210,7 @@ width: 70%;
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 10%;
+  height: 30%;
   position: relative;
   margin-top: 2%;
   font-size: 80%;
@@ -223,6 +223,7 @@ width: 70%;
   right: -20%;
   top: 0;
   width: 65%;
+    height: 20%;
 }
 
 .product-price-div{
@@ -235,11 +236,17 @@ width: 70%;
 
   position: absolute;
   top:0%;
-  right: 4%;
+  right: 10%;
   height: 10%;
   width: 10%;
   margin-bottom: 30%;
 
+}
+
+.cancel-and-submit{
+
+    display: flex;
+    flex-direction: row;
 }
 
 .submit-change-button, .edit-button, .cancel-edit-button{
@@ -356,6 +363,7 @@ border-bottom: 1px solid #c4be4a;
 
 .cart-name-and-price{
   display: flex;
+    width: 20%;
   flex-direction: column;
   margin-right: 6%;
   margin-left: 4%;
@@ -371,7 +379,7 @@ border-bottom: 1px solid #c4be4a;
 
   max-height: 100%;
   max-width: 30%;
-  border: 1px solid #9faf9e;
+
 
 }
 
@@ -386,10 +394,27 @@ right: 14%;
 }
 
 .amount-div{
-  position: absolute;
+    margin: auto;
+    height: 100%;
+    width: 40%;
+
+    display: flex;
+    flex-direction: row;
   right: 0;
 
 
+}
+
+.cart-amount-span{
+    display: block;
+    margin: auto;
+}
+
+.increase-decrease-div{
+
+    display: flex;
+    flex-direction: column;
+margin: auto;
 }
 .plus, .minus, .remove-from-cart{
 
@@ -407,6 +432,28 @@ right: 14%;
   border-bottom: 1px solid #c4be4a;
 }
 
+.plus{
+
+    color: green;
+}
+
+.minus{
+    color: red;
+
+}
+
+.plus-disabled, .minus-disabled{
+
+    color: lightgrey;
+
+}
+
+.plus-disabled:hover, .minus-disabled:hover{
+
+    color: lightgrey;
+    border-bottom: none;
+
+}
 .sign-in-to-edit{
 
   border: none;
