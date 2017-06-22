@@ -7,8 +7,7 @@ import React, { Component } from 'react';
 export default class History extends Component {
 
     render(){
-        /*{action.regretable == true ?
-         <button className="regret-button" onClick={() => this.props.regretAction (action.regretableIndex)}>Regret action</button> : null}*/
+        /**/
         let newActionsList = this.props.historyState.actions
        // newActionsList.reverse();
 
@@ -22,7 +21,8 @@ export default class History extends Component {
 
                 return(
                     <li key={key} className="history-action">{action.message}
-
+                        {action.regretable == true ?
+                            <button className="regret-button" onClick={() => this.props.regretAction (action.regretableIndex)}>Regret action</button> : null}
 
                     </li>
                 )
